@@ -1,4 +1,4 @@
-# Healthcheck-Healthchecker
+# Healthchecks-Healthchecker
 
 ## Problem
 
