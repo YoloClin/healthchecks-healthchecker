@@ -32,7 +32,7 @@ while True:
         r = requests.get(f"{local_url}/api/v1/checks/",
                          headers={"X-Api-Key": local_api_key},
                          auth=https_auth)
-    
+
         data = json.loads(r.content.decode())
         for entry in data["checks"]:
             if entry["name"] != local_hc_name:
@@ -42,11 +42,10 @@ while True:
                 requests.get(remote_healthcheck_url)
             else:
                 log.warning("Local service is DOWN, NOT sending remote ping")
-        
+
         end = time.time()
         execution_time = end - start
-        
-    
+
         if execution_time < hcio_sleep:
             log.debug(f"Sleeping for {hcio_sleep - execution_time} seconds")
             time.sleep(hcio_sleep - execution_time)
