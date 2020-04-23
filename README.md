@@ -47,5 +47,5 @@ docker run \
     -e LOCAL_CHECK_GUID="aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa" \
     -e LOCAL_API_KEY="aaaaaa-aa-aaaaaaaaaaaaaaaaaaaaaa" \
     -e REMOTE_HEALTHCHECK_URL="https://hc-ping.com/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa" \
-    --rm --name hchc healthchecks-healthchecker
+    --rm --name hchc yoloclin/healthchecks-healthchecker
 ```
